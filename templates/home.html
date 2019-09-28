@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Django</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+
+<body>
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper">
+        <div class="main-panel">
+
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-12 grid-margin">
+                        <div class="card">
+                            <div class="card-body">
+
+                                {% for post in posts %}
+                                    <p class="title"> {{ post.title }}</p>
+                                    <p class="body"> {{ post.body }}</p>
+
+                                {% endfor %}
+
+                                <button>
+                                    <a href="{% url 'new' %}">Click me</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
