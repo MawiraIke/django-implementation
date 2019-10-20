@@ -1,5 +1,5 @@
-from django.views.generic import ListView
-from django.views.generic import CreateView
+from django.views.generic import ListView, DetailView
+from django.views.generic.edit import CreateView
 
 from .models import Post
 
@@ -12,5 +12,10 @@ class HomePageView(ListView):
 
 class NewPostView(CreateView):
     model = Post
-    template_name = "add-post.html"
-    fields = ('title', 'body')
+    template_name = "add_post.html"
+    fields = '__all__'
+
+
+class PostDetailView(DetailView):
+    model = Post
+    template_name = "post_detail.html"

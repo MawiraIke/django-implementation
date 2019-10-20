@@ -7,10 +7,11 @@ from django.urls import reverse
 class Post(models.Model):
     title = models.CharField(max_length=200)
     body = models.TextField()
-    success_url = 'home'
+
+    # success_url = 'home'
 
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('home', args=[str(self.id)])
+        return reverse('post_detail', args=[str(self.id)])
