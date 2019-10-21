@@ -1,5 +1,7 @@
-##Django project
+#Django project
 
 This project is a simple implementation of Django.
 
-Resources used: Django for beginners book. (TODO: ADD LINK)
+Resources used: Django for beginners book. https://www.amazon.com/Django-Beginners-Build-websites-Python-ebook/dp/B079ZZLRRL
+
+The project can be found on Heroku at https://django-tut.herokuapp.com/
